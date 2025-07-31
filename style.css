@@ -1,0 +1,25 @@
+/* Custom CSS for Infinite Arrow Up/Down Animation */
+
+.animated-arrow {
+    display: inline-block; /* Essential for transform to work correctly */
+    animation: bounceUpDown 2s infinite ease-in-out; /* Apply the animation */
+    /* Adjust initial position if needed */
+    position: relative;
+    top: 0;
+}
+
+/* Keyframes for the bounce animation */
+@keyframes bounceUpDown {
+    0%, 100% {
+        transform: translateY(0); /* Start and end at original position */
+    }
+    50% {
+        transform: translateY(-50px); /* Move up 10 pixels */
+    }
+}
+
+/* Optional: Add hover effect to pause or modify animation */
+.animated-arrow:hover {
+    animation-play-state: paused; /* Pause animation on hover */
+    /* You could also change transform to move slightly down on hover, etc. */
+}
